@@ -1,0 +1,91 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://schemas.example.com/sensorregistratie.schema.json",
+    "type": "object",
+    "title": "Sensorregistratie",
+    "required": [
+        "naam"
+    ],
+    "properties": {
+        "id": {
+            "description": "UUID voor deze registratie",
+            "type": "string"
+        },
+        "naam": {
+            "description": "Naam voor deze registratie",
+            "type": "string"
+        },
+        "doel": {
+            "description": "Doel van de sensor",
+            "type": "string"
+        },
+        "type": {
+            "description": "Type sensor",
+            "enum": [
+              "nabijheid",
+              "elektrisch",
+              "vloeistof",
+              "camera/optisch",
+              "temperatuur",
+              "overig"
+            ]
+        },
+        "thema": {
+            "description": "Thema-omschrijving voor de inzet van de sensor",
+            "enum": [
+                "verkeersveiligheid"
+            ]
+        },
+        "latitude": {
+            "description": "Breedtegraad van de locatie van de sensor",
+            "type": "number"
+        },
+        "longitude": {
+            "description": "Lengtegraad van de locatie van de sensor",
+            "type": "number"
+        },
+        "geldig tot": {
+            "description": "Geldigheid van deze registratie",
+            "type": "string",
+            "format": "date"
+        },
+        "referentie": {
+            "description": "Omschrijving relevant voor het vinden van de sensor",
+            "type": "string"
+        },
+        "verwerkt persoonsgegevens": {
+            "description": "Geeft aan of de sensor persoonsgegevens verwerkt",
+            "type": "boolean"
+        },
+        "mobiele sensor": {
+            "description": "Geeft aan of de sensor verplaatsbaar is",
+            "type": "boolean"
+        },
+        "organisatie": {
+            "description": "Naam van de organisatie die de sensor registreert",
+            "type": "string"
+        },
+        "contactpersoon": {
+            "description": "Naam van de contactpersoon",
+            "type": "string"
+        },
+        "e-mail": {
+            "description": "E-mailadres van de contactpersoon",
+            "type": "string"
+        },
+        "wettelijke grondslag": {
+            "description": "Wettelijke grondslag voor de inzet van de sensor",
+            "type": "string"
+        },
+        "niet tonen na": {
+            "description": "Datum waarna de registratie niet meer getoond mag worden",
+            "type": "string",
+            "format": "date"
+        },
+        "bewaartermijn": {
+            "description": "Bewaartermijn van de registratie in maanden",
+            "type": "number",
+            "default": 120
+        }
+    }
+}
