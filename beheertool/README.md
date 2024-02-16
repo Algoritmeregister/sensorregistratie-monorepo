@@ -43,4 +43,4 @@ De beheertool biedt een centraal overzicht van de inzet van technologie binnen d
 ## UX
 
 - we volgen de look and feel van Provincie Noord-Branbant
-- we gaan uit van de bestaande applicatie voor de registratie van inzet van algoritmes (PowerApps)
+- we gaan uit van de [bestaande applicatie voor de registratie van inzet van algoritmes](https://www.algoritmeregister.org/beheertool/)
