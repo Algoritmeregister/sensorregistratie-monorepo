@@ -1,0 +1,100 @@
+{
+  "$id": "https://schemas.example.com/maatschappelijke-meerwaarde-sensoren.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Maatschappelijke Meerwaarde van Sensoren",
+  "description": "Van de overheid mag in ieder geval verwacht worden dat zij het goede voorbeeld geeft en dus moet iedere sensor die door de overheid wordt ingezet een maatschappelijke meerwaarde vertegenwoordigen. De inzet van de sensor moet gekoppeld zijn aan het oplossen van een maatschappelijk vraagstuk en dus bijdragen aan (het creëren van) een schonere lucht, snellere doorstroming van verkeer of een veiligere wijk. Wanneer de maatschappelijke meerwaarde van een sensor er niet (meer) is, moet deze sensor gedeactiveerd of verwijderd worden.",
+  "type": "object",
+  "properties": {
+    "beleidsvraag": {
+      "name": "Beleidsvraag",
+      "category": "ACHTERGROND",
+      "type": "string",
+      "description": "Wat is de beleidsvraag waarvoor je op zoek bent naar data?",
+      "required": true
+    },
+    "data": {
+      "name": "Data description",
+      "category": "ACHTERGROND",
+      "type": "string",
+      "description": "Welke data kan helpen om deze vraag te beantwoorden?",
+      "required": true
+    },
+    "maatschappelijke-meerwaarde": {
+      "name": "Maatschappelijke Meerwaarde",
+      "category": "ACHTERGROND",
+      "type": "string",
+      "description": "Welke Maatschappelijke Meerwaarde biedt de inzet van deze sensor bij het werken aan een of meerdere maatschappelijk opgaven van onze provincie?",
+      "required": true
+    },
+    "beschikbaarheid": {
+      "name": "Reeds beschikbaar",
+      "category": "ACHTERGROND",
+      "type": "boolean",
+      "description": "Is de benodigde data al beschikbaar in (een) andere bron(nen)?",
+      "required": true
+    },
+    "noodzaak": {
+      "name": "Noodzaak sensoren",
+      "category": "ACHTERGROND",
+      "type": "boolean",
+      "description": "Kan de benodigde data (op realistische wijze) zonder inzet van sensoren verkregen worden?",
+      "required": true
+    },
+    "maatschappelijke-opgaven": {
+      "name": "Maatschappelijke opgave",
+      "category": "SAMENWERKEN",
+      "type": "string",
+      "description": "Voor welke andere maatschappelijke opgaven binnen de PNB is deze data wellicht relevant? Is een koppeling gemaakt met de betrokken programma(’s)\nen is/zijn deze geïnformeerd/betrokken?",
+      "required": true
+    },
+    "relevante-stakeholders": {
+      "name": "Relevante stakeholders",
+      "category": "SAMENWERKEN",
+      "type": "string",
+      "description": "Wat zijn de relevante stakeholders bij de inzet van deze sensor(en) in deze maatschappelijke opgave(n)? Denk aan: interne stakeholders (binnen PNB-organisatie),  externe stakeholders (andere overheden en samenleving)",
+      "required": true
+    },
+    "rollen-en-taken": {
+      "name": "Rollen en taken",
+      "category": "SAMENWERKEN",
+      "type": "string",
+      "description": "Vanuit welke rol(len) moeten we deze inzet als provincie benaderen en wat zijn onze taken daarbij? Kies uit (meerdere mogelijk): rechtmatige overheid (taken zijn bijv. toezicht houden en/of handhaven), participerende overheid (bijv. stimuleren en/of\nfaciliteren), netwerkende overheid (bijv. regisseren en/of verbinden), presterende overheid\n(bijv. versimpelen en/of optimaliseren)",
+      "required": true
+    },
+    "technische-afwegingen": {
+      "name": "Technische afwegingen",
+      "category": "AFWEGINGEN",
+      "type": "string",
+      "description": "Welke technische afwegingen zijn van belang bij inzet van deze sensor in deze maatschappelijke opgave(n)?",
+      "required": true
+    },
+    "juridische-afwegingen": {
+      "name": "Juridische afwegingen",
+      "category": "AFWEGINGEN",
+      "type": "string",
+      "description": "Welke juridische afwegingen zijn van belang bij inzet van deze sensor in deze maatschappelijke opgave(n)?",
+      "required": true
+    },
+    "ethische-afwegingen": {
+      "name": "Ethische afwegingen",
+      "category": "AFWEGINGEN",
+      "type": "string",
+      "description": "Welke ethische afwegingen zijn van belang bij inzet van deze sensor in deze maatschappelijke opgave(n)?",
+      "required": true
+    },
+    "randvoorwaarden": {
+      "name": "Randvoorwaarden",
+      "category": "VERVOLG",
+      "type": "string",
+      "description": "Wordt aan alle randvoorwaarden voor inzet van sensor(en) met maatschappelijke meerwaarde voldaan? Dit betreft: menselijke maat geborgd, sensordata correct (her)gebruikt, sensoren bewust en gericht ingezet, sensoren geregistreerd en burgers geïnformeerd, sensordata veilig verwerkt en opgeslagen",
+      "required": true
+    },
+    "plan-van-aanpak": {
+      "name": "Plan van aanpak",
+      "category": "VERVOLG",
+      "type": "string",
+      "description": "Hoe en waar wordt de sensor geïmplementeerd? Hoe wordt beheer en onderhoud geborgd? Hoe en waar wordt de data opgeslagen en ontsloten?",
+      "required": true
+    }
+  }
+}

@@ -22,12 +22,12 @@
         "type": {
             "description": "Type sensor",
             "enum": [
-              "nabijheid",
-              "elektrisch",
-              "vloeistof",
-              "camera/optisch",
-              "temperatuur",
-              "overig"
+                "nabijheid",
+                "elektrisch",
+                "vloeistof",
+                "camera/optisch",
+                "temperatuur",
+                "overig"
             ]
         },
         "thema": {
