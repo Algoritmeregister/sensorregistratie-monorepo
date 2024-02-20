@@ -1,0 +1,44 @@
+{
+  "$id": "https://schemas.example.com/randvoorwaarden-sensoren.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Maatschappelijke Meerwaarde van Sensoren",
+  "description": "Van de overheid mag in ieder geval verwacht worden dat zij het goede voorbeeld geeft en dus moet iedere sensor die door de overheid wordt ingezet een maatschappelijke meerwaarde vertegenwoordigen. De inzet van de sensor moet gekoppeld zijn aan het oplossen van een maatschappelijk vraagstuk en dus bijdragen aan (het creëren van) een schonere lucht, snellere doorstroming van verkeer of een veiligere wijk. Wanneer de maatschappelijke meerwaarde van een sensor er niet (meer) is, moet deze sensor gedeactiveerd of verwijderd worden.",
+  "type": "object",
+  "properties": {
+    "menselijke-maat": {
+      "name": "Menselijke maat",
+      "category": "RANDVOORWAARDEN",
+      "type": "string",
+      "description": "Is de menselijke maat geborgd?",
+      "required": true
+    },
+    "correct-hergebruik": {
+      "name": "Correct (her)gebruik",
+      "category": "RANDVOORWAARDEN",
+      "type": "string",
+      "description": "Wordt de sensordata correct (her)gebruikt?",
+      "required": true
+    },
+    "bewuste-en-gerichte-inzet": {
+      "name": "Bewuste en gerichte inzet",
+      "category": "RANDVOORWAARDEN",
+      "type": "string",
+      "description": "Worden de sensoren bewust en gericht ingezet?",
+      "required": true
+    },
+    "geregistreerd-en-geinformeerd": {
+      "name": "Geregistreerd en burgers geïnformeerd",
+      "category": "RANDVOORWAARDEN",
+      "type": "string",
+      "description": "Worden de sensoren geregistreerd en burgers geïnformeerd?",
+      "required": true
+    },
+    "veilige-verwerking": {
+      "name": "Veilige verwerking",
+      "category": "RANDVOORWAARDEN",
+      "type": "string",
+      "description": "Wordt de sensordata veilig verwerkt en opgeslagen?",
+      "required": true
+    }
+  }
+}
