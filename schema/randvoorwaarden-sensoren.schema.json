@@ -39,6 +39,20 @@
       "type": "string",
       "description": "Wordt de sensordata veilig verwerkt en opgeslagen?",
       "required": true
+    },
+    "url-meer-info": {
+      "name": "Meer informatie",
+      "category": "OVERIGE",
+      "type": "string",
+      "description": "Wat is de URL waarop meer informatie beschikbaar is?",
+      "required": true
+    },
+    "herzieningsdatum": {
+      "name": "Herzieningsdatum",
+      "category": "OVERIGE",
+      "type": "string",
+      "description": "Voor welke datum moet deze registratie worden herzien?",
+      "required": true
     }
   }
 }
