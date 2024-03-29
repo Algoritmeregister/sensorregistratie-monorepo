@@ -16,6 +16,16 @@
             font-weight: bolder;
         }
 
+        .category {
+            font-size: 2em;
+            margin: 2em auto;
+            padding: 10px 20px;
+            line-height: 2em;
+            border-top: 5px solid black;
+            border-bottom: 5px solid black;
+            text-align: center;
+        }
+
         span {
             font-style: italic;
             background: #eeeeee;
@@ -40,8 +50,12 @@
                 appendElement('h1', mainElement, schema.title);
                 appendElement('p', mainElement, schema.description);
                 appendElement('p', mainElement, `<span>Source: <a href="${schema.$id}">${schema.$id}</a></span>`);
-                appendElement('hr', mainElement, "");
+                var category = "";
                 for (p in schema.properties) {
+                    if (schema.properties[p].category != category) {
+                        category = schema.properties[p].category;
+                        appendElement('h2', mainElement, category, "category");
+                    }
                     appendElement('h2', mainElement, schema.properties[p].name);
                     if (schema.properties[p].description) appendElement('p', mainElement, schema.properties[p].description, "description");
                     if (schema.properties[p].instructions) appendElement('p', mainElement, schema.properties[p].instructions, "instructions");
