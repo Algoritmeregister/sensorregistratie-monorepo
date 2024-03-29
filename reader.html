@@ -16,12 +16,7 @@
             font-weight: bolder;
         }
 
-        .type,
-        .format,
-        .enum,
-        .const,
-        .maxlength,
-        .display {
+        span {
             font-style: italic;
             background: #eeeeee;
             display: inline-block;
@@ -44,7 +39,7 @@
             .then(schema => {
                 appendElement('h1', mainElement, schema.title);
                 appendElement('p', mainElement, schema.description);
-                appendElement('p', mainElement, `Bekijk de bron .schema.json op: <a href="${schema.$id}">${schema.$id}</a>`);
+                appendElement('p', mainElement, `<span>Source: <a href="${schema.$id}">${schema.$id}</a></span>`);
                 appendElement('hr', mainElement, "");
                 for (p in schema.properties) {
                     appendElement('h2', mainElement, schema.properties[p].name);
