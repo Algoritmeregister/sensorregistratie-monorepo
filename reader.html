@@ -1,48 +1,64 @@
 <!DOCTYPE html>
 <html>
-<body>
-<style>
-    body {
-        font-family: Arial;
-    }
-    .description {
-        font-weight: bolder;
-    }
-    .type, .format, .enum, .const, .maxlength, .display {
-        font-style: italic;
-        background: #eeeeee;
-        display: inline-block;
-        padding: 2px 10px;
-        font-size: 0.8em;
-        font-family: monospace;
-    }
-</style>
-<script>
-    function appendElement(tag, text, c = "") {
-        const element = document.createElement(tag);
-        element.className = c;
-        element.innerHTML = text + " ";
-        document.body.appendChild(element);
-        return element;
-    }
-    fetch(new URLSearchParams(window.location.search).get('url'))
-        .then(response => response.json())
-        .then(schema => {
-            appendElement('h1', schema.title);
-            appendElement('p', schema.description);
-            for (p in schema.properties) {
-                appendElement('h2', schema.properties[p].name);
-                if (schema.properties[p].description) appendElement('p', schema.properties[p].description, "description");
-                if (schema.properties[p].instructions) appendElement('p', schema.properties[p].instructions, "instructions");
-                if (schema.properties[p].display) appendElement('span', "display: " + schema.properties[p].display, "display");
-                if (schema.properties[p].type) appendElement('span', "type: " + schema.properties[p].type, "type");
-                if (schema.properties[p].maxLength) appendElement('span', "maxlength: " + schema.properties[p].maxLength, "maxlength");
-                if (schema.properties[p].format) appendElement('span', "format: " + schema.properties[p].format, "format");
-                if (schema.properties[p].const) appendElement('span', "const: " + schema.properties[p].const, "const");
-                if (schema.properties[p].enum) appendElement('span', "enum: " + schema.properties[p].enum.join(', '), "enum");
-                appendElement('hr', "");
-            }
-        });
-</script>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="https://www.tiltshift.nl/assets/fonts/TILTSHIFT.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.tiltshift.nl/css/styles.css" />
+</head>
+
+<body class="body--variant-white">
+    <main style="margin-top: 90px"></main>
+    <footer style="margin-bottom: 90px">
+        <center>CC-BY 2024 <a href="https://www.tiltshift.nl/mensen/johan-groenen">Johan Groenen, Tiltshift</a></center>
+    </footer>
+    <style>
+        .description {
+            font-weight: bolder;
+        }
+
+        .type,
+        .format,
+        .enum,
+        .const,
+        .maxlength,
+        .display {
+            font-style: italic;
+            background: #eeeeee;
+            display: inline-block;
+            padding: 2px 10px;
+            font-size: 0.8em;
+            font-family: monospace;
+        }
+    </style>
+    <script>
+        var mainElement = document.querySelector('main');
+        function appendElement(tag, parentElement, text, c = "") {
+            const element = document.createElement(tag);
+            element.className = c;
+            element.innerHTML = text + " ";
+            parentElement.appendChild(element);
+            return element;
+        }
+        fetch(new URLSearchParams(window.location.search).get('url'))
+            .then(response => response.json())
+            .then(schema => {
+                appendElement('h1', mainElement, schema.title);
+                appendElement('p', mainElement, schema.description);
+                for (p in schema.properties) {
+                    appendElement('h2', mainElement, schema.properties[p].name);
+                    if (schema.properties[p].description) appendElement('p', mainElement, schema.properties[p].description, "description");
+                    if (schema.properties[p].instructions) appendElement('p', mainElement, schema.properties[p].instructions, "instructions");
+                    var pElement = appendElement('p', mainElement, "");
+                    if (schema.properties[p].display) appendElement('span', pElement, "display: " + schema.properties[p].display, "display");
+                    if (schema.properties[p].type) appendElement('span', pElement, "type: " + schema.properties[p].type, "type");
+                    if (schema.properties[p].maxLength) appendElement('span', pElement, "maxlength: " + schema.properties[p].maxLength, "maxlength");
+                    if (schema.properties[p].format) appendElement('span', pElement, "format: " + schema.properties[p].format, "format");
+                    if (schema.properties[p].const) appendElement('span', pElement, "const: " + schema.properties[p].const, "const");
+                    if (schema.properties[p].enum) appendElement('span', pElement, "enum: " + schema.properties[p].enum.join(', '), "enum");
+                    appendElement('hr', mainElement, "");
+                }
+            });
+    </script>
 </body>
+
 </html>
