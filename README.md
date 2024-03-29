@@ -1,4 +1,1 @@
-# Sensorenregistratie Monorepo
-
-## /schema
-Wat houden we bij over sensoren en wat is het conceptueel model
+# Schemas voor Verantwoorde Inzet van Technologie (VIT)
