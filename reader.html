@@ -25,8 +25,7 @@
         document.body.appendChild(element);
         return element;
     }
-
-    fetch('https://www.algoritmeregister.org/schemas/algoritmeregister-publicatiestandaard-v1.0.0.schema.json')
+    fetch(new URLSearchParams(window.location.search).get('url'))
         .then(response => response.json())
         .then(schema => {
             appendElement('h1', schema.title);
