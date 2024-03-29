@@ -3,6 +3,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "Algoritmeregister Publicatiestandaard v1.0.0",
     "description": "Deze standaard beschrijft de minimale set van gegevens die gepubliceerd moet worden over algoritmes die door de overheid worden ingezet.",
+    "community": "https://github.com/Algoritmeregister/schemas/blob/main/algoritmeregister-publicatiestandaard-v1.0.0.schema.json",
     "type": "object",
     "required": [
         "name",

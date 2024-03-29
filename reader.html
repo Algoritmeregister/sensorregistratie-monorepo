@@ -49,6 +49,7 @@
             .then(schema => {
                 appendElement('h1', mainElement, schema.title);
                 appendElement('p', mainElement, schema.description);
+                appendElement('p', mainElement, `Community: <a href="${schema.community}">${schema.community}</a>`);
                 appendElement('p', mainElement, `<span>Source: <a href="${schema.$id}">${schema.$id}</a></span>`);
                 var category = "";
                 for (p in schema.properties) {
