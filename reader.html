@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+    body {
+        font-family: Arial;
+    }
+    .description {
+        font-weight: bolder;
+    }
+    .type, .format, .enum, .const, .maxlength, .display {
+        font-style: italic;
+        background: #eeeeee;
+        display: inline-block;
+        padding: 2px 10px;
+        font-size: 0.8em;
+        font-family: monospace;
+    }
+</style>
+<script>
+    function appendElement(tag, text, c = "") {
+        const element = document.createElement(tag);
+        element.className = c;
+        element.innerHTML = text + " ";
+        document.body.appendChild(element);
+        return element;
+    }
+
+    fetch('https://www.algoritmeregister.org/schemas/algoritmeregister-publicatiestandaard-v1.0.0.schema.json')
+        .then(response => response.json())
+        .then(schema => {
+            appendElement('h1', schema.title);
+            appendElement('p', schema.description);
+            for (p in schema.properties) {
+                appendElement('h2', schema.properties[p].name);
+                if (schema.properties[p].description) appendElement('p', schema.properties[p].description, "description");
+                if (schema.properties[p].instructions) appendElement('p', schema.properties[p].instructions, "instructions");
+                if (schema.properties[p].display) appendElement('span', "display: " + schema.properties[p].display, "display");
+                if (schema.properties[p].type) appendElement('span', "type: " + schema.properties[p].type, "type");
+                if (schema.properties[p].maxLength) appendElement('span', "maxlength: " + schema.properties[p].maxLength, "maxlength");
+                if (schema.properties[p].format) appendElement('span', "format: " + schema.properties[p].format, "format");
+                if (schema.properties[p].const) appendElement('span', "const: " + schema.properties[p].const, "const");
+                if (schema.properties[p].enum) appendElement('span', "enum: " + schema.properties[p].enum.join(', '), "enum");
+                appendElement('hr', "");
+            }
+        });
+</script>
+</body>
+</html>
