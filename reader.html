@@ -44,6 +44,8 @@
             .then(schema => {
                 appendElement('h1', mainElement, schema.title);
                 appendElement('p', mainElement, schema.description);
+                appendElement('p', mainElement, `Bekijk de bron .schema.json op: <a href="${schema.$id}">${schema.$id}</a>`);
+                appendElement('hr', mainElement, "");
                 for (p in schema.properties) {
                     appendElement('h2', mainElement, schema.properties[p].name);
                     if (schema.properties[p].description) appendElement('p', mainElement, schema.properties[p].description, "description");
