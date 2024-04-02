@@ -1,13 +1,14 @@
+---
+---
 <!DOCTYPE html>
 <html>
 
-<head>
-    <link rel="stylesheet" type="text/css" href="https://www.tiltshift.nl/assets/fonts/TILTSHIFT.css" />
-    <link rel="stylesheet" type="text/css" href="https://www.tiltshift.nl/css/styles.css" />
-</head>
+{% include head.html %}
 
 <body class="body--variant-white">
-    <main style="margin-top: 90px"></main>
+    <main>
+        <p><a href="..">Terug</a></p>
+    </main>
     <footer style="margin-bottom: 90px">
         <center>A MICROTOOL BY <a href="https://www.tiltshift.nl/mensen/johan-groenen">Johan Groenen, Tiltshift</a></center>
     </footer>
@@ -65,6 +66,7 @@
                     if (schema.properties[p].type) appendElement('span', pElement, "type: " + schema.properties[p].type, "type");
                     if (schema.properties[p].maxLength) appendElement('span', pElement, "maxlength: " + schema.properties[p].maxLength, "maxlength");
                     if (schema.properties[p].format) appendElement('span', pElement, "format: " + schema.properties[p].format, "format");
+                    if (schema.properties[p].pattern) appendElement('span', pElement, "pattern: " + schema.properties[p].pattern, "pattern");
                     if (schema.properties[p].const) appendElement('span', pElement, "const: " + schema.properties[p].const, "const");
                     if (schema.properties[p].enum) appendElement('span', pElement, "enum: " + schema.properties[p].enum.join(', '), "enum");
                     appendElement('hr', mainElement, "");
