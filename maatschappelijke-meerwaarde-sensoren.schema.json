@@ -1,8 +1,9 @@
 {
-  "$id": "https://schemas.example.com/maatschappelijke-meerwaarde-sensoren.schema.json",
+  "$id": "https://www.algoritmeregister.org/schemas/maatschappelijke-meerwaarde-sensoren.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Maatschappelijke Meerwaarde van Sensoren",
   "description": "Van de overheid mag in ieder geval verwacht worden dat zij het goede voorbeeld geeft en dus moet iedere sensor die door de overheid wordt ingezet een maatschappelijke meerwaarde vertegenwoordigen. De inzet van de sensor moet gekoppeld zijn aan het oplossen van een maatschappelijk vraagstuk en dus bijdragen aan (het creëren van) een schonere lucht, snellere doorstroming van verkeer of een veiligere wijk. Wanneer de maatschappelijke meerwaarde van een sensor er niet (meer) is, moet deze sensor gedeactiveerd of verwijderd worden.",
+  "community": "https://github.com/Algoritmeregister/schemas/",
   "type": "object",
   "properties": {
     "beleidsvraag": {

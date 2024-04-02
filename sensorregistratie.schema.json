@@ -1,8 +1,10 @@
 {
+    "$id": "https://www.algoritmeregister.org/schemas/sensorregistratie.schema.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://schemas.example.com/sensorregistratie.schema.json",
-    "type": "object",
     "title": "Sensorregistratie",
+    "description": "",
+    "community": "https://github.com/Algoritmeregister/schemas/",
+    "type": "object",
     "required": [
         "naam"
     ],
