@@ -1,0 +1,156 @@
+{
+    "$id": "https://www.algoritmeregister.org/schemas/dpia.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Gegevensbeschermingseffectbeoordeling (PIA)",
+    "description": "",
+    "type": "object",
+    "properties": {
+        "organization": {
+            "name": "Naam ministerie",
+            "category": "ALGEMENE INFORMATIE",
+            "type": "string",
+            "description": "",
+            "required": true
+        },
+        "department": {
+            "name": "Naam directie",
+            "category": "ALGEMENE INFORMATIE",
+            "type": "string",
+            "description": "",
+            "required": true
+        },
+        "introduction": {
+            "name": "Inleiding",
+            "category": "ALGEMENE INFORMATIE",
+            "type": "string",
+            "description": "Voeg hier wanneer gewenst een openingsalinea of inleiding toe. Denk bijvoorbeeld aan: - Verwijzing naar het privacybeleid of motivatie achter de uitvoering van deze PIA; - Informatie over de manier van opstellen.",
+            "required": true
+        },
+        "proposal": {
+            "name": "1. Voorstel",
+            "category": "A. Beschrijving kenmerken gegevensverwerkingen",
+            "type": "string",
+            "description": "Beschrijf het voorstel waar de gegevensbeschermingseffectbeoordeling op ziet en context waarbinnen deze plaatsvindt op hoofdlijnen.",
+            "required": true
+        },
+        "personal_data": {
+            "name": "2. Persoonsgegevens",
+            "category": "A. Beschrijving kenmerken gegevensverwerkingen",
+            "type": "string",
+            "description": "Som alle categorieën van persoonsgegevens op die worden verwerkt. Geef per categorie van persoonsgegevens tevens aan op wie die betrekking hebben. Deel deze persoonsgegevens in onder de typen: gewoon, bijzonder, strafrechtelijk en wettelijk identificerend.",
+            "required": false
+        },
+        "data_processing": {
+            "name": "3. Gegevensverwerkingen",
+            "category": "A. Beschrijving kenmerken gegevensverwerkingen",
+            "type": "string",
+            "description": "Geef alle voorgenomen gegevensverwerkingen weer.",
+            "required": true
+        },
+        "processing_purposes": {
+            "name": "4. Verwerkingsdoeleinden",
+            "category": "A. Beschrijving kenmerken gegevensverwerkingen",
+            "type": "string",
+            "description": "Beschrijf de doeleinden van de voorgenomen gegevensverwerkingen.",
+            "required": true
+        },
+        "involved_parties": {
+            "name": "5. Betrokken Partijen",
+            "category": "A. Beschrijving kenmerken gegevensverwerkingen",
+            "type": "string",
+            "description": "Benoem welke organisaties betrokken zijn bij welke gegevensverwerkingen. Deel deze organisaties per gegevensverwerking in onder de rollen: verwerkingsverantwoordelijke, verwerker, verstrekker en ontvanger. Benoem tevens welke functionarissen binnen deze organisaties toegang krijgen tot welke persoonsgegevens.",
+            "required": true
+        },
+        "interests": {
+            "name": "6. Belangen bij de gegevensverwerking",
+            "category": "A. Beschrijving kenmerken gegevensverwerkingen",
+            "type": "string",
+            "description": "Beschrijf alle belangen die de verwerkingsverantwoordelijke en anderen hebben bij de voorgenomen gegevensverwerkingen",
+            "required": true
+        },
+        "processing_locations": {
+            "name": "7. Verwerkingslocaties",
+            "category": "A. Beschrijving kenmerken gegevensverwerkingen",
+            "type": "string",
+            "description": "Benoem in welke landen de voorgenomen gegevensverwerkingen plaatsvinden.",
+            "required": true
+        },
+        "techniques_and_methods": {
+            "name": "8. Techniek en methode van gegevensverwerking",
+            "category": "A. Beschrijving kenmerken gegevensverwerkingen",
+            "type": "string",
+            "description": "Beschrijf op welke wijze en met gebruikmaking van welke (technische) middelen en methoden de persoonsgegevens worden verwerkt. Benoem of sprake is van (semi-)geautomatiseerde besluitvorming, profilering of big data-verwerkingen en, zo ja, beschrijf waaruit een en ander bestaat.",
+            "required": true
+        },
+        "legal_and_policy_framework": {
+            "name": "9. Juridisch en beleidsmatig kader",
+            "category": "A. Beschrijving kenmerken gegevensverwerkingen",
+            "type": "string",
+            "description": "Benoem de wet- en regelgeving, met uitzondering van de AVG en de Richtlijn, en het beleid met mogelijke gevolgen voor de gegevensverwerkingen.",
+            "required": true
+        },
+        "retention_periods": {
+            "name": "10. Bewaartermijnen",
+            "category": "A. Beschrijving kenmerken gegevensverwerkingen",
+            "type": "string",
+            "description": "Bepaal en motiveer de bewaartermijnen van de persoonsgegevens aan de hand van de verwerkingsdoeleinden.",
+            "required": true
+        },
+        "legal_basis": {
+            "name": "11. Rechtsgrond",
+            "category": "B. Beoordeling rechtmatigheid gegevensverwerkingen",
+            "type": "string",
+            "description": "Bepaal op welke rechtsgronden de gegevensverwerkingen worden gebaseerd.",
+            "required": true
+        },
+        "sensitive_personal_data": {
+            "name": "12. Bijzondere Persoonsgegevens",
+            "category": "B. Beoordeling rechtmatigheid gegevensverwerkingen",
+            "type": "string",
+            "description": "Indien bijzondere of strafrechtelijke persoonsgegevens worden verwerkt, beoordeel of één van de wettelijke uitzonderingen op het verwerkingsverbod van toepassing is. Bij verwerking van een wettelijk identificatienummer beoordeel of dat is toegestaan.Indien bijzondere of strafrechtelijke persoonsgegevens worden verwerkt, beoordeel of één van de wettelijke uitzonderingen op het verwerkingsverbod van toepassing is. Bij verwerking van een wettelijk identificatienummer beoordeel of dat is toegestaan.",
+            "required": true
+        },
+        "purpose_limitation": {
+            "name": "13. Doelbinding",
+            "category": "B. Beoordeling rechtmatigheid gegevensverwerkingen",
+            "type": "string",
+            "description": "Indien de persoonsgegevens voor een ander doel worden verwerkt dat oorspronkelijk verzameld, beoordeel of deze verdere verwerking verenigbaar is met het doel waarvoor de persoonsgegevens oorspronkelijk zijn verzameld.",
+            "required": true
+        },
+        "necessity_and_proportionality": {
+            "name": "14. Noodzaak en evenredigheid",
+            "category": "B. Beoordeling rechtmatigheid gegevensverwerkingen",
+            "type": "string",
+            "description": "Beoordeel of de voorgenomen gegevensverwerkingen noodzakelijk zijn voor het verwezenlijken van de verwerkingsdoeleinden. Ga hierbij in ieder geval in op proportionaliteit en subsidiariteit.",
+            "required": true
+        },
+        "rights": {
+            "name": "15. Rechten van de betrokkene",
+            "category": "B. Beoordeling rechtmatigheid gegevensverwerkingen",
+            "type": "string",
+            "description": "Geef aan hoe invulling wordt gegeven aan de rechten van betrokkenen. Indien de rechten van de betrokkene worden beperkt, bepaal op grond van welke wettelijke uitzonderingen dat is toegestaan.",
+            "required": true
+        },
+        "risks": {
+            "name": "16. Risico's",
+            "category": "C. Beschrijving en beoordeling risico's voor de betrokkenen",
+            "type": "string",
+            "description": "Beschrijf en beoordeel de risico's van de gegevensverwerkingen voor de rechten en vrijheden van betrokkenen. Ga hierbij in ieder geval in op: a. welke negatieve gevolgen de gegevensverwerkingen kunnen hebben voor de rechten en vrijheden van de betrokkenen; b. de oorsprong van deze gevolgen; c. de waarschijnlijkheid (kans) dat deze gevolgen zullen intreden; d. de ernst (impact) van deze gevolgen voor de betrokkenen wanneer deze intreden.",
+            "required": true
+        },
+        "measures": {
+            "name": "17. Maatregelen",
+            "category": "D. Beschrijvin voorgenomen maatregelen",
+            "type": "string",
+            "description": "Beoordeel welke technische, organisatorische en juridische maatregelen in redelijkheid kunnen worden getroffen om de hiervoor beschreven risico's te voorkomen of te verminderen. Beschrijf welke maatregel welk risico aanpakt en wat het restrisico is na uitvoeren van de maatregel. Indien de maatregel het risico niet volledig afdekt, motiveer waarom het restrisico acceptabel is.",
+            "required": true
+        },
+        "additions": {
+            "name": "Toevoegingen",
+            "category": "",
+            "type": "string",
+            "description": "Hier kunt u aanvullende punten toevoegen. Denk bijvoorbeeld aan: - Lessen uit deze PIA; - Volgende stappen etc.",
+            "required": true
+        }
+    }
+}
