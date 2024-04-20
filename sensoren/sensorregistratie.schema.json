@@ -4,15 +4,7 @@ description: Schema voor de registratie van sensoren
 community: https://github.com/Algoritmeregister/schemas/
 ---
 {
-    "$id": "{{ site.url }}{{ page.url }}",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "{{ page.title }}",
-    "description": "{{ page.description }}",
-    "community": "{{ page.community }}",
-    "type": "object",
-    "required": [
-        "naam"
-    ],
+    {% include header.json %}
     "properties": {
         "id": {
             "name": "ID",
@@ -135,5 +127,8 @@ community: https://github.com/Algoritmeregister/schemas/
             "type": "number",
             "default": 120
         }
-    }
+    },
+    "required": [
+        "naam"
+    ]
 }

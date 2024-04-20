@@ -4,32 +4,7 @@ description: "Deze standaard beschrijft de minimale set van gegevens die gepubli
 community: https://github.com/Algoritmeregister/schemas/
 ---
 {
-    "$id": "{{ site.url }}{{ page.url }}",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "{{ page.title }}",
-    "description": "{{ page.description }}",
-    "community": "{{ page.community }}",
-    "type": "object",
-    "required": [
-        "name",
-        "description_short",
-        "organization",
-        "theme",
-        "status",
-        "start_date",
-        "contact",
-        "publication_category",
-        "purpose_and_impact",
-        "considerations",
-        "human_intervention",
-        "risk_management",
-        "impact_assessments",
-        "data",
-        "technical_operation",
-        "supplier",
-        "language",
-        "schema"
-    ],
+    {% include header.json %}
     "properties": {
         "name": {
             "name": "Naam",
@@ -338,5 +313,25 @@ community: https://github.com/Algoritmeregister/schemas/
             "instructions": "Termen gerelateerd aan dit algoritme. Gescheiden door komma's. Dit veld wordt niet weergegeven op de website en kan worden gebruikt om de vindbaarheid van de registratie te verbeteren. Zo kan bijvoorbeeld de naam van het relevante ministerie worden toegevoegd om als uitvoerorganisatie beter vindbaar te zijn met de zoekfunctie.",
             "example": "Verkeer, Mobiliteit, Infrastructuur, Waddengebied"
         }
-    }
+    },
+    "required": [
+        "name",
+        "description_short",
+        "organization",
+        "theme",
+        "status",
+        "start_date",
+        "contact",
+        "publication_category",
+        "purpose_and_impact",
+        "considerations",
+        "human_intervention",
+        "risk_management",
+        "impact_assessments",
+        "data",
+        "technical_operation",
+        "supplier",
+        "language",
+        "schema"
+    ]
 }

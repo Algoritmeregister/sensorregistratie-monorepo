@@ -4,12 +4,7 @@ description: Schema voor een contract
 community: 
 ---
 {
-    "$id": "{{ site.url }}{{ page.url }}",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "{{ page.title }}",
-    "description": "{{ page.description }}",
-    "community": "{{ page.community }}",
-    "type": "object",
+    {% include header.json %}
     "properties": {
         "number": {
             "name": "Contractnummer of referentie",

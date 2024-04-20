@@ -4,12 +4,7 @@ description: Van de overheid mag in ieder geval verwacht worden dat zij het goed
 community: https://github.com/Algoritmeregister/schemas/
 ---
 {
-  "$id": "{{ site.url }}{{ page.url }}",
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "{{ page.title }}",
-  "description": "{{ page.description }}",
-  "community": "{{ page.community }}",
-  "type": "object",
+  {% include header.json %}
   "properties": {
     "menselijke-maat": {
       "name": "Menselijke maat",
