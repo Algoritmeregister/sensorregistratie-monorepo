@@ -1,9 +1,14 @@
+---
+title: Impact Assessment Mensenrechten en Algoritmes
+description:
+community: https://github.com/Algoritmeregister/schemas/
+---
 {
-    "$id": "https://www.algoritmeregister.org/schemas/iama.schema.json",
+    "$id": "{{ site.url }}{{ page.url }}",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "Impact Assessment Mensenrechten en Algoritmes",
-    "description": "",
-    "community": "https://github.com/Algoritmeregister/schemas/",
+    "title": "{{ page.title }}",
+    "description": "{{ page.description }}",
+    "community": "{{ page.community }}",
     "type": "object",
     "properties": {
         "name": {

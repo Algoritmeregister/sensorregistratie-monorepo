@@ -1,0 +1,52 @@
+---
+title: Contract
+description: Schema voor een contract
+community: 
+---
+{
+    "$id": "{{ site.url }}{{ page.url }}",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "{{ page.title }}",
+    "description": "{{ page.description }}",
+    "community": "{{ page.community }}",
+    "type": "object",
+    "properties": {
+        "number": {
+            "name": "Contractnummer of referentie",
+            "type": "string",
+            "description": "Contractnummer of referentie"
+        },
+        "date": {
+            "name": "Contractdatum",
+            "type": "string",
+            "format": "date",
+            "description": "Contractdatum"
+        },
+        "endDate": {
+            "name": "Einddatum contractperiode",
+            "type": "string",
+            "format": "date",
+            "description": "Einddatum contractperiode"
+        },
+        "manager": {
+            "name": "Contractmanager PNB",
+            "type": "string",
+            "description": "Contractmanager PNB"
+        },
+        "details": {
+            "name": "Bijzonderheden",
+            "type": "string",
+            "description": "Bijzonderheden"
+        },
+        "organization": {
+            "name": "Organisatie",
+            "type": "string",
+            "description": "Organisatie"
+        },
+        "contact": {
+            "name": "Contactpersoon",
+            "$ref": "https://www.algoritmeregister.org/schemas/algemeen/contactpersoon.schema.json"
+        }
+    },
+    "required": ["number", "date", "endDate", "manager", "details", "organization", "contact"]
+}

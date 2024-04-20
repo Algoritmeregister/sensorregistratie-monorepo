@@ -14,7 +14,7 @@
     </footer>
     <style>
         .description {
-            font-weight: bolder;
+            /* font-weight: bolder; */
         }
 
         .category {
@@ -50,13 +50,14 @@
             .then(schema => {
                 appendElement('h1', mainElement, schema.title);
                 appendElement('p', mainElement, schema.description);
-                appendElement('p', mainElement, `Community: <a href="${schema.community}">${schema.community}</a>`);
+                if (schema.community) appendElement('p', mainElement, `Community: <a href="${schema.community}">${schema.community}</a>`);
                 appendElement('p', mainElement, `<span>Source: <a href="${schema.$id}">${schema.$id}</a></span>`);
                 var category = "";
                 for (p in schema.properties) {
                     if (schema.properties[p].category != category) {
                         category = schema.properties[p].category;
-                        appendElement('h2', mainElement, category, "category");
+                        if (category) appendElement('h2', mainElement, category, "category");
+                        else appendElement('h2', mainElement, "Attributen", "category");
                     }
                     appendElement('h2', mainElement, schema.properties[p].name);
                     if (schema.properties[p].description) appendElement('p', mainElement, schema.properties[p].description, "description");
@@ -69,6 +70,7 @@
                     if (schema.properties[p].pattern) appendElement('span', pElement, "pattern: " + schema.properties[p].pattern, "pattern");
                     if (schema.properties[p].const) appendElement('span', pElement, "const: " + schema.properties[p].const, "const");
                     if (schema.properties[p].enum) appendElement('span', pElement, "enum: " + schema.properties[p].enum.join(', '), "enum");
+                    if (schema.properties[p].$ref) appendElement('span', pElement, `$ref: <a href="${schema.properties[p].$ref}">${schema.properties[p].$ref}</a>`, "ref");
                     appendElement('hr', mainElement, "");
                 }
             });

@@ -1,0 +1,46 @@
+---
+title: "Contactpersoon"
+description: 
+community: 
+---
+{
+    "$id": "{{ site.url }}{{ page.url }}",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "{{ page.title }}",
+    "description": "{{ page.description }}",
+    "community": "{{ page.community }}",
+    "type": "object",
+    "properties": {
+        "name": {
+            "name": "Naam",
+            "type": "string",
+            "description": "De naam van de contactpersoon."
+        },
+        "organization": {
+            "name": "Organisatie",
+            "type": "string",
+            "description": "De organisatie waar de contactpersoon werkzaam is."
+        },
+        "organizationalUnit": {
+            "name": "Afdeling",
+            "type": "string",
+            "description": "De afdeling waar de contactpersoon werkzaam is."
+        },
+        "function": {
+            "name": "Functie",
+            "type": "string",
+            "description": "De functie van de contactpersoon."
+        },
+        "phone": {
+            "name": "Telefoonnummer",
+            "type": "string",
+            "description": "Het telefoonnummer van de contactpersoon."
+        },
+        "email": {
+            "name": "E-mailadres",
+            "type": "string",
+            "description": "Het e-mailadres van de contactpersoon."
+        }
+    },
+    "required": ["naam", "telefoonnummer", "email"]
+}
