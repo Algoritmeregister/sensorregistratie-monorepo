@@ -1,0 +1,70 @@
+---
+title: "Organisatorische activiteit"
+description: 
+community: 
+---
+{
+    {% include header.json %}
+    "properties": {
+        "id": {
+            "name": "ID",
+            "type": "string",
+            "format": "uuid",
+            "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+            "example": "47b1e7e3-0b36-4f1f-8d7b-3f0b3f3f3f3f",
+            "description": "Een unieke identifier voor de organisatorische activiteit."
+        },
+        "name": {
+            "name": "Naam",
+            "type": "string",
+            "description": "De naam van de organisatorische activiteit."
+        },
+        "type": {
+            "name": "Type",
+            "enum": ["proces", "project", "overig"],
+            "description": "Het type van de organisatorische activiteit."
+        },
+        "beschrijving": {
+            "name": "Beschrijving",
+            "type": "string",
+            "description": "Een beschrijving van de organisatorische activiteit."
+        },
+        "grondslag": {
+            "name": "Grondslag",
+            "type": "string",
+            "description": "De grondslag van de organisatorische activiteit."
+        },
+        "organization": {
+            "name": "Organisatie",
+            "type": "string",
+            "description": "De organisatie waarbinnen de organisatorische activiteit plaatsvindt."
+        },
+        "organizationalUnit": {
+            "name": "Afdeling",
+            "type": "string",
+            "description": "De afdeling waarbinnen de organisatorische activiteit plaatsvindt."
+        },
+        "contactpersoon": {
+            "name": "Contactpersoon",
+            "$ref": "{{ "/sensoren/pnb/contactpersoon.schema.json" | absolute_url }}"
+        },
+        "startdatum": {
+            "name": "Startdatum",
+            "type": "string",
+            "format": "date",
+            "description": "De startdatum van de organisatorische activiteit."
+        },
+        "einddatum": {
+            "name": "Einddatum",
+            "type": "string",
+            "format": "date",
+            "description": "De einddatum van de organisatorische activiteit."
+        },
+        "status": {
+            "name": "Status",
+            "enum": ["actief", "inactief"],
+            "description": "De status van de organisatorische activiteit."
+        }
+    },
+    "required": ["id", "name", "type", "organization", "startdatum", "status"]
+}
