@@ -1,11 +1,68 @@
 ---
-title: "Verantwoorde Inzet van Sensoren"
-description: "Verantwoorde Inzet van Sensoren"
+title: "Registratiestandaard voor Verantwoorde Inzet van Sensoren."
+description: "Registratiestandaard voor Verantwoorde Inzet van Sensoren."
 community: "https://github.com/Algoritmeregister/schemas/"
 ---
 {
   {% include header.json %}
   "properties": {
+    "id": {
+        "name": "ID",
+        "category": "ALGEMEEN",
+        "description": "UUID voor deze registratie.",
+        "type": "string",
+        "format": "uuid",
+        "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "naam": {
+        "name": "Naam",
+        "category": "ALGEMEEN",
+        "description": "Naam voor deze registratie.",
+        "type": "string"
+    },
+    "doel": {
+        "name": "Doel",
+        "category": "ALGEMEEN",
+        "description": "Doel van de inzet van sensoren.",
+        "type": "string"
+    },
+    "thema": {
+        "name": "Thema",
+        "category": "ALGEMEEN",
+        "description": "Thema-omschrijving voor de inzet van sensoren.",
+        "enum": [
+            "verkeersveiligheid",
+            "milieu",
+            "auto"
+        ]
+    },
+    "geldig tot": {
+        "name": "Geldig tot",
+        "category": "ALGEMEEN",
+        "description": "Geldigheid van deze registratie (dd-mm-yyyy).",
+        "type": "string",
+        "pattern": "^[0-9]{2}-[0-9]{2}-[0-9]{4}$"
+    },
+    "wettelijke grondslag": {
+        "name": "Wettelijke grondslag",
+        "category": "ALGEMEEN",
+        "description": "Wettelijke grondslag voor de inzet van de sensor.",
+        "type": "string"
+    },
+    "niet tonen na": {
+        "name": "Niet tonen na",
+        "category": "ALGEMEEN",
+        "description": "Datum waarna de registratie niet meer getoond mag worden (dd-mm-yyyy).",
+        "type": "string",
+        "pattern": "^[0-9]{2}-[0-9]{2}-[0-9]{4}$"
+    },
+    "bewaartermijn": {
+        "name": "Bewaartermijn",
+        "category": "ALGEMEEN",
+        "description": "Bewaartermijn van de registratie in maanden.",
+        "type": "number",
+        "default": 120
+    },
     "menselijke-maat": {
       "name": "Menselijke maat",
       "category": "RANDVOORWAARDEN MAATSCHAPPELIJKE MEERWAARDE",

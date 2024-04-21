@@ -43,7 +43,7 @@ community: "https://github.com/Algoritmeregister/schemas/"
             "items": { "type": "string" },
             "display": "mandatory",
             "description": "Het beleidsterrein waarin het algoritme wordt ingezet.",
-            "instructions": "Beleidsterrein(en) waarin het algoritme wordt ingezet. Zie voor mogelijke waarden: https://standaarden.overheid.nl/owms/4.0/doc/waardelijsten/themaindeling-voor-officiele-publicaties",
+            "instructions": "Beleidsterrein(en) waarin het algoritme wordt ingezet. Zie voor mogelijke waarden: https://standaarden.overheid.nl/owms/4.0/doc/waardelijsten/thema-indeling-voor-officiele-publicaties",
             "example": "[\"Verkeer\"]"
         },
         "status": {
