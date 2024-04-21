@@ -1,6 +1,6 @@
 ---
-title: Sensorregistratie
-description: Schema voor de registratie van sensoren
+title: WeCity Sensorregister Publicatieschema
+description: Schema voor het publiceren van sensorregistraties naar het WeCity Sensorregister.
 community: https://github.com/Algoritmeregister/schemas/
 ---
 {
