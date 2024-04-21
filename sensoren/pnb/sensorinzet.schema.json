@@ -39,9 +39,9 @@ community: "https://github.com/Algoritmeregister/schemas/"
     "geldig tot": {
         "name": "Geldig tot",
         "category": "ALGEMEEN",
-        "description": "Geldigheid van deze registratie (dd-mm-yyyy).",
+        "description": "Deze registratie is geldig tot deze datum (YYYY-MM-DD).",
         "type": "string",
-        "pattern": "^[0-9]{2}-[0-9]{2}-[0-9]{4}$"
+        "format": "date"
     },
     "wettelijke grondslag": {
         "name": "Wettelijke grondslag",
@@ -52,9 +52,9 @@ community: "https://github.com/Algoritmeregister/schemas/"
     "niet tonen na": {
         "name": "Niet tonen na",
         "category": "ALGEMEEN",
-        "description": "Datum waarna de registratie niet meer getoond mag worden (dd-mm-yyyy).",
+        "description": "Datum waarna de registratie niet meer getoond mag worden (YYYY-MM-DD).",
         "type": "string",
-        "pattern": "^[0-9]{2}-[0-9]{2}-[0-9]{4}$"
+        "format": "date"
     },
     "bewaartermijn": {
         "name": "Bewaartermijn",
