@@ -1,7 +1,7 @@
 ---
 title: "Algoritmeregister Publicatiestandaard v1.0.0"
 description: "Deze standaard beschrijft de minimale set van gegevens die gepubliceerd moet worden over algoritmes die door de overheid worden ingezet."
-community: https://github.com/Algoritmeregister/schemas/
+community: "https://github.com/Algoritmeregister/schemas/"
 ---
 {
     {% include header.json %}

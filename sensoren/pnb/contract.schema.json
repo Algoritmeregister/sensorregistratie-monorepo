@@ -1,6 +1,6 @@
 ---
-title: Contract
-description: Schema voor een contract
+title: "Contractdetails"
+description: "Schema voor contractdetails"
 community: 
 ---
 {
@@ -24,9 +24,9 @@ community:
             "description": "Einddatum contractperiode"
         },
         "manager": {
-            "name": "Contractmanager PNB",
+            "name": "Contractmanager",
             "type": "string",
-            "description": "Contractmanager PNB"
+            "description": "Contractmanager"
         },
         "details": {
             "name": "Bijzonderheden",
@@ -40,8 +40,16 @@ community:
         },
         "contact": {
             "name": "Contactpersoon",
-            "$ref": "https://www.algoritmeregister.org/schemas/algemeen/contactpersoon.schema.json"
+            "$ref": "{{ "/sensoren/pnb/contactpersoon.schema.json" | absolute_url }}"
         }
     },
-    "required": ["number", "date", "endDate", "manager", "details", "organization", "contact"]
+    "required": [
+        "number",
+        "date",
+        "endDate",
+        "manager",
+        "details",
+        "organization",
+        "contact"
+    ]
 }

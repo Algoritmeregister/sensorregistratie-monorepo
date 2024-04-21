@@ -1,0 +1,85 @@
+---
+title: "Sensor beheerschema"
+description: "Schema voor het beheren van een sensor."
+community: "https://github.com/Algoritmeregister/schemas/"
+---
+{
+    {% include header.json %}
+    "properties": {
+        "id": {
+            "name": "ID",
+            "category": "ALGEMEEN",
+            "description": "UUID voor deze registratie",
+            "type": "string"
+        },
+        "identificatie": {
+            "name": "Identificatie",
+            "category": "ALGEMEEN",
+            "description": "Identificatie van de sensor (bijv. merk en type)",
+            "type": "string"
+        },
+        "type": {
+            "name": "Type",
+            "category": "ALGEMEEN",
+            "description": "Type sensor",
+            "enum": [
+                "nabijheid",
+                "elektrisch",
+                "vloeistof",
+                "camera/optisch",
+                "temperatuur",
+                "klimaat",
+                "overig"
+            ]
+        },
+        "latitude": {
+            "name": "Latitude",
+            "category": "ALGEMEEN",
+            "description": "Breedtegraad van de locatie van de sensor",
+            "type": "number",
+            "minimum": -90,
+            "maximum": 90
+        },
+        "longitude": {
+            "name": "Longitude",
+            "category": "ALGEMEEN",
+            "description": "Lengtegraad van de locatie van de sensor",
+            "type": "number",
+            "minimum": -180,
+            "maximum": 180
+        },
+        "referentie": {
+            "name": "Referentie",
+            "category": "ALGEMEEN",
+            "description": "Omschrijving relevant voor het vinden van de sensor",
+            "type": "string"
+        },
+        "verwerkt persoonsgegevens": {
+            "name": "Verwerkt persoonsgegevens",
+            "category": "ALGEMEEN",
+            "description": "Geeft aan of de sensor persoonsgegevens verwerkt",
+            "type": "boolean"
+        },
+        "mobiele sensor": {
+            "name": "Mobiele sensor",
+            "category": "ALGEMEEN",
+            "description": "Geeft aan of de sensor verplaatsbaar is",
+            "type": "boolean"
+        },
+        "leverancier": {
+          "name": "Leverancier",
+          "description": "Contractdetails voor levering van de sensor.",
+          "category": "JURIDISCHE GEGEVENS",
+          "$ref": "{{ "/sensoren/pnb/contract.schema.json" | absolute_url }}"
+        },
+        "beheerder": {
+            "name": "Beheer",
+            "description": "Contractdetails voor beheer van de sensor.",
+            "category": "JURIDISCHE GEGEVENS",
+            "$ref": "{{ "/sensoren/pnb/contract.schema.json" | absolute_url }}"
+        }
+    },
+    "required": [
+        "naam"
+    ]
+}

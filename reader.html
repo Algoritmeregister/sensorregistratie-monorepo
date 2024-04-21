@@ -13,10 +13,6 @@
         <center>A MICROTOOL BY <a href="https://www.tiltshift.nl/mensen/johan-groenen">Johan Groenen, Tiltshift</a></center>
     </footer>
     <style>
-        .description {
-            /* font-weight: bolder; */
-        }
-
         .category {
             font-size: 2em;
             margin: 2em auto;
@@ -71,6 +67,7 @@
                     if (schema.properties[p].const) appendElement('span', pElement, "const: " + schema.properties[p].const, "const");
                     if (schema.properties[p].enum) appendElement('span', pElement, "enum: " + schema.properties[p].enum.join(', '), "enum");
                     if (schema.properties[p].$ref) appendElement('span', pElement, `$ref: <a href="${schema.properties[p].$ref}">${schema.properties[p].$ref}</a>`, "ref");
+                    if (schema.properties[p].$ref) appendElement('p', mainElement, `<a href="{{ page.url | relative_url }}?url=${schema.properties[p].$ref}">Bekijk het schema voor ${schema.properties[p].name}.</a>`, "ref");
                     appendElement('hr', mainElement, "");
                 }
             });

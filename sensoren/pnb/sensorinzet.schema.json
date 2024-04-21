@@ -1,0 +1,78 @@
+---
+title: "Verantwoorde Inzet van Sensoren"
+description: "Verantwoorde Inzet van Sensoren"
+community: "https://github.com/Algoritmeregister/schemas/"
+---
+{
+  {% include header.json %}
+  "properties": {
+    "menselijke-maat": {
+      "name": "Menselijke maat",
+      "category": "RANDVOORWAARDEN MAATSCHAPPELIJKE MEERWAARDE",
+      "type": "string",
+      "description": "Is de menselijke maat geborgd?",
+      "required": true
+    },
+    "correct-hergebruik": {
+      "name": "Correct (her)gebruik",
+      "category": "RANDVOORWAARDEN MAATSCHAPPELIJKE MEERWAARDE",
+      "type": "string",
+      "description": "Wordt de sensordata correct (her)gebruikt?",
+      "required": true
+    },
+    "locatie-sensordata": {
+      "name": "Locatie sensordata",
+      "category": "RANDVOORWAARDEN MAATSCHAPPELIJKE MEERWAARDE",
+      "type": "string",
+      "format": "uri",
+      "description": "Link naar de locatie van de sensordata."
+    },
+    "bewuste-en-gerichte-inzet": {
+      "name": "Bewuste en gerichte inzet",
+      "category": "RANDVOORWAARDEN MAATSCHAPPELIJKE MEERWAARDE",
+      "type": "string",
+      "description": "Worden de sensoren bewust en gericht ingezet?",
+      "required": true
+    },
+    "grondslag-of-beleidskader": {
+      "name": "Grondslag of beleidskader",
+      "category": "RANDVOORWAARDEN MAATSCHAPPELIJKE MEERWAARDE",
+      "type": "string",
+      "format": "uri",
+      "description": "Link naar wettelijke grondslag en/of beleidskader indien van toepassing."
+    },
+    "geregistreerd-en-geinformeerd": {
+      "name": "Geregistreerd en burgers geïnformeerd",
+      "category": "RANDVOORWAARDEN MAATSCHAPPELIJKE MEERWAARDE",
+      "type": "string",
+      "description": "Worden de sensoren geregistreerd en burgers geïnformeerd?",
+      "required": true
+    },
+    "veilige-verwerking": {
+      "name": "Veilige verwerking",
+      "category": "RANDVOORWAARDEN MAATSCHAPPELIJKE MEERWAARDE",
+      "type": "string",
+      "description": "Wordt de sensordata veilig verwerkt en opgeslagen?",
+      "required": true
+    },
+    "dpia": {
+      "name": "DPIA",
+      "category": "RANDVOORWAARDEN MAATSCHAPPELIJKE MEERWAARDE",
+      "type": "string",
+      "format": "uri",
+      "description": "Link naar de DPIA indien van toepassing."
+    },
+    "opdrachtgever": {
+      "name": "Opdrachtgever",
+      "description": "Opdrachtgever van deze inzet van sensoren.",
+      "category": "ORGANISATORISCHE GEGEVENS",
+      "$ref": "{{ "/sensoren/pnb/contactpersoon.schema.json" | absolute_url }}"
+    },
+    "gebruiker": {
+      "name": "Gebruiker",
+      "description": "Gebruiker van de sensorinformatie.",
+      "category": "ORGANISATORISCHE GEGEVENS",
+      "$ref": "{{ "/sensoren/pnb/contactpersoon.schema.json" | absolute_url }}"
+    }
+  }
+}
