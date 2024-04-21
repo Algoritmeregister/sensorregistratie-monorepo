@@ -18,6 +18,13 @@ community: "https://github.com/Algoritmeregister/schemas/"
             "description": "Identificatie van de sensor (bijv. merk en type)",
             "type": "string"
         },
+        "specificatie": {
+            "name": "Technische specificatie",
+            "category": "ALGEMEEN",
+            "description": "Link naar de technische specificatie van de sensor (bijv. brochure)",
+            "type": "string",
+            "format": "uri"
+        },
         "type": {
             "name": "Type",
             "category": "ALGEMEEN",
@@ -31,6 +38,39 @@ community: "https://github.com/Algoritmeregister/schemas/"
                 "klimaat",
                 "overig"
             ]
+        },
+        "firmware": {
+            "name": "Firmware",
+            "category": "ALGEMEEN",
+            "description": "Firmware (versie) van de sensor",
+            "type": "string"
+        },
+        "update datum": {
+            "name": "Update firmware noodzakelijk",
+            "category": "ALGEMEEN",
+            "description": "Datum voor noodzakelijke firmware update",
+            "type": "string",
+            "format": "date"
+        },
+        "onderhoud hardware": {
+            "name": "Onderhoud hardware",
+            "category": "ALGEMEEN",
+            "description": "Datum voor noodzakelijk onderhoud aan de hardware",
+            "type": "string",
+            "format": "date"
+        },
+        "technische gegevens": {
+            "name": "Overige technische gegevens",
+            "category": "ALGEMEEN",
+            "description": "Overige technische gegevens over de sensor",
+            "type": "string"
+        },
+        "aanvullende documentatie": {
+            "name": "Aanvullende technische documentatie",
+            "category": "ALGEMEEN",
+            "description": "Link naar de technische documentatie van de sensor",
+            "type": "string",
+            "format": "uri"
         },
         "latitude": {
             "name": "Latitude",
@@ -77,9 +117,24 @@ community: "https://github.com/Algoritmeregister/schemas/"
             "description": "Contractdetails voor beheer van de sensor.",
             "category": "JURIDISCHE GEGEVENS",
             "$ref": "{{ "/sensoren/pnb/contract.schema.json" | absolute_url }}"
+        },
+        "overige juridische gegevens": {
+            "name": "Overige juridische gegevens",
+            "description": "Overige relevante juridische gegevens.",
+            "category": "JURIDISCHE GEGEVENS",
+            "type": "string"
+        },
+        "aanvullende juridische documentatie": {
+            "name": "Aanvullende juridische documentatie",
+            "description": "Link naar aanvullende juridische documentatie.",
+            "category": "JURIDISCHE GEGEVENS",
+            "type": "string",
+            "format": "uri"
         }
     },
     "required": [
-        "naam"
+        "id",
+        "naam",
+        "specificatie"
     ]
 }
