@@ -3,7 +3,8 @@ layout: default
 ---
 # Schemas voor Verantwoorde Inzet van Technologie (VIT)
 
-{% for schemaFile in site.pages %}
+{% assign sortedPages = site.pages | sort: 'url' %}
+{% for schemaFile in sortedPages %}
 {% if schemaFile.path contains 'schema.json' %}
 [{{ schemaFile.title }}](reader.html?url={{ schemaFile.path | absolute_url }})
 {% endif %}
