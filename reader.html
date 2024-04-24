@@ -60,7 +60,7 @@
                     if (schema.properties[p].description) appendElement('p', mainElement, schema.properties[p].description, "description");
                     if (schema.properties[p].instructions) appendElement('p', mainElement, schema.properties[p].instructions, "instructions");
                     var pElement = appendElement('p', mainElement, "");
-                    if (p) appendElement('span', pElement, "name: " + p, "display");
+                    if (p) appendElement('span', pElement, "property: " + p, "display");
                     if (schema.properties[p].type) appendElement('span', pElement, "type: " + schema.properties[p].type, "type");
                     if (schema.properties[p].maxLength) appendElement('span', pElement, "maxlength: " + schema.properties[p].maxLength, "maxlength");
                     if (schema.properties[p].format) appendElement('span', pElement, "format: " + schema.properties[p].format, "format");
