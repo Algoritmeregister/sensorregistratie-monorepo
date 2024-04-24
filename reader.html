@@ -30,6 +30,7 @@
             padding: 2px 10px;
             font-size: 0.8em;
             font-family: monospace;
+            margin-right: 10px;
         }
     </style>
     <script>
@@ -59,7 +60,7 @@
                     if (schema.properties[p].description) appendElement('p', mainElement, schema.properties[p].description, "description");
                     if (schema.properties[p].instructions) appendElement('p', mainElement, schema.properties[p].instructions, "instructions");
                     var pElement = appendElement('p', mainElement, "");
-                    if (schema.properties[p].display) appendElement('span', pElement, "display: " + schema.properties[p].display, "display");
+                    if (p) appendElement('span', pElement, "name: " + p, "display");
                     if (schema.properties[p].type) appendElement('span', pElement, "type: " + schema.properties[p].type, "type");
                     if (schema.properties[p].maxLength) appendElement('span', pElement, "maxlength: " + schema.properties[p].maxLength, "maxlength");
                     if (schema.properties[p].format) appendElement('span', pElement, "format: " + schema.properties[p].format, "format");
@@ -67,6 +68,7 @@
                     if (schema.properties[p].const) appendElement('span', pElement, "const: " + schema.properties[p].const, "const");
                     if (schema.properties[p].enum) appendElement('span', pElement, "enum: " + schema.properties[p].enum.join(', '), "enum");
                     if (schema.properties[p].$ref) appendElement('span', pElement, `$ref: <a href="${schema.properties[p].$ref}">${schema.properties[p].$ref}</a>`, "ref");
+                    if (schema.properties[p].display) appendElement('span', pElement, "display: " + schema.properties[p].display, "display");
                     if (schema.properties[p].$ref) appendElement('p', mainElement, `<a href="{{ page.url | relative_url }}?url=${schema.properties[p].$ref}">Bekijk het schema voor ${schema.properties[p].name}.</a>`, "ref");
                     appendElement('hr', mainElement, "");
                 }
