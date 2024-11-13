@@ -2,5 +2,7 @@
 "$schema": "https://json-schema.org/draft/2020-12/schema",
 "title": "{{ page.title }}",
 "description": "{{ page.description }}",
+"status": "{{ page.status }}",
 "community": "{{ page.community }}",
+"website": "{{ page.website }}",
 "type": "object",

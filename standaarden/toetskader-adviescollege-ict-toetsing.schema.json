@@ -1,0 +1,96 @@
+---
+title: "Toetskader Adviescollege ICT-Toetsing"
+status: "work in progress"
+description: "Het toetskader biedt een leidraad bij de uitvoering van het onderzoeksproces. Daarnaast geeft het toetskader ondersteuning aan opdrachtgevers, project- en programmaorganisaties, en CIO-offices  binnen het Rijk om de risico’s van projecten beter te beheersen en daarmee hun slaagkans te vergroten."
+community: "https://github.com/Algoritmeregister/schemas/"
+website: "https://www.adviescollegeicttoetsing.nl/onze-werkwijze/toetskader/toetskader"
+---
+{
+    {% include header.json %}
+    "properties": {
+        "aanleiding": {
+            "name": "1. Er is een duidelijke aanleiding, probleemstelling en doelstelling voor het project.",
+            "category": "Businesscase, baten en financiering",
+            "type": "boolean",
+            "description": "Er is een duidelijke aanleiding, probleemstelling en doelstelling voor het project. Deze onderwerpen zijn helder, beknopt en eenduidig geformuleerd, zodat voor alle (interne en externe) betrokkenen duidelijk is wat het belang van het project is.",
+            "required": true
+        },
+        "businesscase": {
+            "name": "2. De businesscase onderbouwt de meerwaarde voor de organisatie, eindgebruiker, burger en maatschappij.",
+            "category": "Businesscase, baten en financiering",
+            "type": "boolean",
+            "description": "De verwachte kosten en baten zijn onderbouwd en tegen elkaar afgewogen. De businesscase maakt onderscheid in baten voor de eindgebruikers/burgers, de organisatie en de maatschappij.",
+            "required": true
+        },
+        "kwantitatieve_baten": {
+            "name": "3. Kwantitatieve baten zijn vertaald in financiële termen.",
+            "category": "Businesscase, baten en financiering",
+            "type": "boolean",
+            "description": "Baten kunnen kwalitatief en kwantitatief van aard zijn. Tenminste kwantitatieve baten zijn vertaald naar financiële consequenties.",
+            "required": true
+        },
+        "kwalitatieve_baten": {
+            "name": "4. Kwalitatieve baten zijn zodanig gespecificeerd dat ze achteraf te verifiëren zijn.",
+            "category": "Businesscase, baten en financiering",
+            "type": "boolean",
+            "description": "Ook baten die niet gekwantificeerd kunnen worden, moeten zoveel mogelijk meetbaar worden gemaakt.",
+            "required": true
+        },
+        "verantwoordelijkheid_baten": {
+            "name": "5. Het is duidelijk wie verantwoordelijk is/zijn om de baten van het project te realiseren.",
+            "category": "Businesscase, baten en financiering",
+            "type": "boolean",
+            "description": "De verantwoordelijke persoon of rol binnen de organisatie heeft een duidelijk (intern of extern) belang bij het behalen van de baten, zodat deze intrinsiek gemotiveerd is het project tot een succes te maken. De realisatie van de baten is bijvoorbeeld vastgelegd in managementafspraken. Het is daarbij duidelijk wanneer baten gerealiseerd worden.",
+            "required": true
+        },
+        "sturingsmogelijkheden": {
+            "name": "6. De verantwoordelijke(n) heeft/hebben sturingsmogelijkheden om de baten te realiseren.",
+            "category": "Businesscase, baten en financiering",
+            "type": "boolean",
+            "description": "Indien voor de realisatie medewerking van andere partijen nodig is, dan is medewerking van deze partijen verzekerd of is ten minste draagvlak bij deze partijen aangetoond.",
+            "required": true
+        },
+        "scenarios": {
+            "name": "7. Scenario’s met alternatieve oplossingen zijn opgesteld, onderbouwd en afgewogen.",
+            "category": "Businesscase, baten en financiering",
+            "type": "boolean",
+            "description": "De voor- en nadelen van verschillende scenario’s, inclusief een ‘nul-scenario’, zijn onderbouwd en afgewogen. Ook bij het vervangen van een bestaande applicatie zijn verschillende alternatieve oplossingsrichtingen afgewogen, inclusief renovatie en gedeeltelijke vervanging. Bij de beoordeling van alternatieven wordt onder meer gebruik gemaakt van de kostenhistorie van bestaande applicaties.",
+            "required": true
+        },
+        "impact": {
+            "name": "8. Impact van de oplossing op uitvoeringsorganisaties, burgers en bedrijven zijn onderzocht.",
+            "category": "Businesscase, baten en financiering",
+            "type": "boolean",
+            "description": "Uitvoeringsorganisaties hebben de uitvoerbaarheid van de gekozen oplossingsrichting onderzocht, inclusief de impact op burgers en bedrijven. Impact van algoritmes en automatische besluitvorming op burgers en bedrijven zijn onderzocht op bijvoorbeeld transparantie, controleerbaarheid en representativiteit.",
+            "required": true
+        },
+        "actueel": {
+            "name": "9. De businesscase is actueel en wordt gebruikt bij besluitvormingsprocessen.",
+            "category": "Businesscase, baten en financiering",
+            "type": "boolean",
+            "description": "De kosten, baten en voortgang worden minimaal na elke fase of significante wijzigingen van het project geactualiseerd. Verschillen ten opzichte van de oorspronkelijke versie van de businesscase worden verklaard. De actuele businesscase wordt als instrument gebruikt bij besluitvorming.",
+            "required": true
+        },
+        "wet_en_regelgeving": {
+            "name": "10. In de businesscase is aantoonbaar rekening gehouden met toepasselijke wet- en regelgeving.",
+            "category": "Businesscase, baten en financiering",
+            "type": "boolean",
+            "description": "In de businesscase is opgenomen welke wet- en regelgeving van toepassing zijn en op welke wijze naleving is geborgd.",
+            "required": true
+        },
+        "financiering": {
+            "name": "11. Er is financiële dekking voor de looptijd van het project en de beheerfase.",
+            "category": "Businesscase, baten en financiering",
+            "type": "boolean",
+            "description": "Projecten worden alleen geïnitieerd indien de opdrachtgever daarvoor in de benodigde middelen voor de gehele levenscyclus kan voorzien.",
+            "required": true
+        },
+        "financiele_ruimte": {
+            "name": "12. Voor wijzigingen gedurende de looptijd van het project is voldoende financiële ruimte.",
+            "category": "Businesscase, baten en financiering",
+            "type": "boolean",
+            "description": "Geen nadere toelichting opgenomen.",
+            "required": true
+        }
+    }
+}
